@@ -1,6 +1,6 @@
 # Producing anime images with WGAN
 
-![](/Users/ipsihou/Documents/anime/myplot.jpg)
+![](generated_images/myplot.jpg)
 
 ### Environment
 
