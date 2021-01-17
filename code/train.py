@@ -136,6 +136,12 @@ if __name__ == "__main__":
                 plt.show()
 
             cur_step += 1
+    gen_save_name = "gen.pt"
+    path = '/Users/ipsihou/Documents/anime/{gen_save_name}'
+    torch.save(gen.state_dict(), path)
+    crit_save_name = "crit.pt"
+    path = '/Users/ipsihou/Documents/anime/{crit_save_name}'
+    torch.save(crit.state_dict(), path)
 
 
 

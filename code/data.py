@@ -21,7 +21,7 @@ transformer=transforms.Compose([
             transforms.Resize((28,28)),
             transforms.ToTensor()
         ])
-anime_dataset=ImageFolder('./anime_images',transformer)
+anime_dataset=ImageFolder('/Users/ipsihou/Documents/anime/anime_images',transformer)
 dataloader = DataLoader(anime_dataset,batch_size=batch_size,shuffle=True)
 show_sample_image(dataloader)
 
