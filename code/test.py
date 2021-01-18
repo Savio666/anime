@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import torch
 from torchvision.utils import make_grid
 
+# function to demonstrate the anime images from tensor
 def show_tensor_images(image_tensor, num_images=25, size=(1, 28, 28), ):
     image_tensor = (image_tensor + 1) / 2
     image_unflat = image_tensor.detach().cpu()
@@ -12,8 +13,10 @@ def show_tensor_images(image_tensor, num_images=25, size=(1, 28, 28), ):
     plt.show()
 
 if __name__ == "__main__":
+    # specify the parameters
     z_dim = 64
     size  = 128
+    # generate random anime images
     test_noise = model.get_noise(z_dim, z_dim)
     gen = model.Generator(z_dim)
     gen_save_name = "gen.pt"

@@ -7,23 +7,19 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-def show_sample_image(dataloader):
-  iterator = iter(dataloader)
-  sample_batch, _ = iterator.next()
-  first_sample_image_of_batch = sample_batch[0]
-  print(first_sample_image_of_batch.size())
-  print("Current range: {} to {}".format(first_sample_image_of_batch.min(), first_sample_image_of_batch.max()))
-  plt.imshow(np.transpose(first_sample_image_of_batch.numpy(), (1, 2, 0)))
-
+# spcify the parameters
 batch_size = 128
 image_size = 28
+
+# create a transformer
 transformer=transforms.Compose([
             transforms.Resize((28,28)),
             transforms.ToTensor()
         ])
+
+# transform the images and apply dataloader
 anime_dataset=ImageFolder('/Users/ipsihou/Documents/anime/anime_images',transformer)
 dataloader = DataLoader(anime_dataset,batch_size=batch_size,shuffle=True)
-show_sample_image(dataloader)
 
 
 

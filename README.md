@@ -2,9 +2,20 @@
 
 ![](generated_images/myplot.jpg)
 
-### Environment
+### Setting up environment
 
-The version of the packages is stated in requirements.txt
+```
+# Create the environment in conda with python version 3.6
+conda create -n myenv python=3.6
+
+# Activate the environment
+conda activate myenv
+
+# Install the packages
+pip install -r requirements.txt
+```
+
+
 
 ### Preparing the datasets
 

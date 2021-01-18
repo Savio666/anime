@@ -2,7 +2,7 @@ import torch
 from torch import nn
 
 
-
+# create the Generator
 class Generator(nn.Module):
     def __init__(self,z_dim=10,channels=3,hidden_dim=64):
         super(Generator,self).__init__()
@@ -31,9 +31,11 @@ class Generator(nn.Module):
          x = noise.view(len(noise), self.z_dim, 1, 1)
          return self.gen(x)
 
+# get the random noise
 def get_noise(n_samples,z_dim,device="cpu"):
     return torch.randn(n_samples,z_dim,device=device)
 
+# create the critic
 class Critic(nn.Module):
     def __init__(self,channels=3,hidden_dim=64):
         super(Critic, self).__init__()
