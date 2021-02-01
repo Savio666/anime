@@ -1,6 +1,6 @@
 # Producing anime images with WGAN
 
-![](generated_images/myplot.jpg)
+![](img_result/testing.jpg)
 
 ### Setting up environment
 
